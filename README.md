@@ -1,23 +1,55 @@
-# DÃ©fi Genapi groupe Septeo : Sous la robe des LegalTech
+# Introduction
+«L'étudiant d'aujourd'hui est le responsable de demain », autrement dit que le nouvel étudiant doit être bien instruit, bien cultivé et éduqué.
 
-## ThÃ¨mes
-LegalTech, Micro services
+Il doit en un mot avoir du savoir-vivre et du savoir-faire ; il doit penser et réfléchir avec rectitude ; il doit en outre s'exprimer de façon correcte et donner son point de vue en toute sincérité et pour parvienne, c’est pour ça il est très important qu’il reçoit au sien de sa vie universitaire un soutien moral ainsi que matériel par l’intégration de ce dernier dans son université.
 
-## DÃ©fi
-Le monde des LegalTech (utilisation des technos et logiciels pour offrir des services juridiques) impose souvent une maÃ®trise complÃ¨te et sÃ©curisÃ©e des donnÃ©es reparties sur plusieurs sites.
+Nous faisons partie de sa famille d’accueil, nous pouvons avoir un impact énorme sur son bonheur et l’aider à surmonter le mal du pays, afin qu’il puisse profiter au mieux de son séjour.
 
-Nous vous proposons un aperÃ§u de notre quotidien en implÃ©mentant votre solution en architecture microservices sur une stack multi-technos.
-Dans votre solution pour le sujet principal de la Nuit de l'Info, faites dialoguer un minimum de 2 composants qui ne doivent pouvoir se connaÃ®tre que par leur annuaire (service discovery).
+La nuit de l’info a pensé d’eux et le défi proposé pendant cette année intitulé « La précarité étudiante ». Pour répondre à cette exigence nous avons proposé une solution web qui permet de faire pivoter cet étudiant à avoir le bien être, en encourageant-le à rester en contact, partageant nos cultures, occupant leur esprit et donnant lui un peu de temps pour ressentir le manque de son foyer. 
 
-Ceux deux (ou plus !) composants et annuaires doivent Ãªtre implÃ©mentÃ©s dans des technologies diffÃ©rentes (C#, Js/Ts et autre), mais doivent communiquer de maniÃ¨re la plus transparente possible pour l'utilisateur. 
-Nâ€™hÃ©sitez pas Ã  utiliser VsCode et ses nombreuses extensions.
+## Etude conceptuelle
+Le diagramme de classe permet de modéliser les classes du système et leurs relations indépendamment d’un langage de programmation particulier.
 
-![Defi Nuit de l'info 2019](./NuitDeLinfo.jpg)
+Vous avez trouvez dans le dossier **"Documentation"** les diagrammes de classe et l'architecture de notre application.
 
-## DÃ©pot
+## Installation
 
-Plusieurs possibilitÃ©s :
-- Effectuez une Pull Request sur ce GitHub avec vos sources ou un README expliquant comment accÃ©der Ã  votre projet
-- Effectuez un Fork du dÃ©pÃ´t et poussez vos sources ou un README expliquant comment accÃ©der Ã  votre projet
+Pattern mediator
 
-Dans tous les cas incluez un README ou une documentation permettant la comprÃ©hension de votre solution
+```bash
+Install Package MediatR
+```
+
+
+Pattern CQRS
+
+
+
+Approche création de base de données Code First
+
+
+
+Gateway and service discovery
+
+``` bash
+Install Package Ocelot
+```
+``` bash
+Install Package Ocelot.Provider.Consul
+```
+
+
+
+
+
+
+## Usage
+Pour avoir la base de données de microservice UniversityApi , il faut spécifier 
+la chaine de connection dans le fichier appsettings.json et faire la migration on spécifiant 
+le bibliothèque UniversityPersistence comme projet de démarage.
+
+
+
+## Probleme
+On a eu une probeleme au niveau de la version de la CLR de .Net core 3.0 quand on fait l'implémentation de package consul.
+
